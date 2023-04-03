@@ -1,32 +1,3 @@
-import pygame
-import sys
-import time
-import random
-
-pygame.init()
-pink = (255, 192, 203)
-white = (255, 255, 255)
-yellow = (255, 255, 102)
-black = (0, 0, 0)
-red = (213, 50, 80)
-green = (0, 153, 0)
-blue = (50, 153, 213)
-dis_width = 800
-dis_height = 600
-dis = pygame.display.set_mode((dis_width, dis_height))
-pygame.display.set_caption('Змейка')
-
-
-clock = pygame.time.Clock()
-snake_block = 10
-snake_speed = 15
-font_style = pygame.font.SysFont("Srbija Sans", 25)
-score_font = pygame.font.SysFont("Srbija Sans", 25)
-
-
-def Your_score(score):
-    value = score_font.render("score: " + str(score), True, green)
-    dis.blit(value, [0, 0])
 
 
 def our_snake(snake_block, snake_list):
@@ -53,7 +24,7 @@ def gameLoop():
     while not game_over:
         while game_close == True:
             dis.fill(black)
-            message("Вы умерли Нажмите Q для выхода или C чтобы повторить", red)
+            message("антивирус умер Нажмите Q для переустановки винды или C чтобы починится", red)
             Your_score(Length_of_snake - 1)
             pygame.display.update()
             for event in pygame.event.get():
